@@ -29,7 +29,7 @@ func main() {
 		fmt.Fprintf(w, "Hello autodeployment wizard!!!! you've requested %s\n", r.URL.Path)
 	})
 
-	port := "80"
+	port := os.Getenv("PORT")
 	if port == "" {
 		port = "80"
 	}
